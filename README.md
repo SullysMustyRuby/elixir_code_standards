@@ -1,7 +1,7 @@
 # General Development Style Guide
 To ensure consistent code readability and quality please refer to this guide for Elixir code standards.
 
-Elixir Style Guide https://github.com/christopheradams/elixir_style_guide/blob/master/README.md
+[Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide/blob/master/README.md)
 
 When designing and writing code please follow Single Responsibility Principle and Tell Don't Ask Principle as much as possible. 
 
@@ -15,9 +15,9 @@ Please design for the “happy scenario”, our software should know how to beha
 General Guidelines
 Elixir has a “let it crash” philosophy thus please keep this in mind while handling errors. More information can be found about this design paradigm.
 
-Erlang Let it crash Philosophy  https://medium.com/@vamsimokari/erlang-let-it-crash-philosophy-53486d2a6da
+[Erlang Let it crash Philosophy](https://medium.com/@vamsimokari/erlang-let-it-crash-philosophy-53486d2a6da)
 
-Let it crash https://verraes.net/2014/12/erlang-let-it-crash/
+[Let it crash](https://verraes.net/2014/12/erlang-let-it-crash)
 
 Catching errors
 We do not play catch with ourselves here!
@@ -64,13 +64,13 @@ These should be handled similar to scenario 2 failures. The error information sh
 Ensure that if there is a message that someone is productively working on it. We do not want to flood the teams with meaningless messages that then over time get ignored. 
 
 ## API Error responses
-Please follow standard HTTP error codes (https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) when returning error responses through an API endpoint or UI. HTTP error codes are supported by many libraries and frameworks. There is no need to re-invent this wheel. 
+Please follow standard [HTTP error codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) when returning error responses through an API endpoint or UI. HTTP error codes are supported by many libraries and frameworks. There is no need to re-invent this wheel. 
 
 Internal error codes should never be returned to anyone using our API's. Our internal error handling is our business and others who depend on our API should be given a productive message from the above guidelines if it falls under scenario 1. If the error is scenario 2 or 3 (i.e. an internal problem) then follow HTTP conventions and return an appropriate 500 response!
 
 ## Testing Standards
 ### General Guidelines
-The most common library for testing in Elixir is the ExUnit Testing Package (https://hexdocs.pm/ex_unit/ExUnit.html) to maintain consistency please use this library for testing projects. For a brief tutorial please visit the Elixir School Testing Tutorial (https://elixirschool.com/en/lessons/basics/testing/).
+The most common library for testing in Elixir is the [ExUnit Testing Package](https://hexdocs.pm/ex_unit/ExUnit.html) to maintain consistency please use this library for testing projects. For a brief tutorial please visit the [Elixir School Testing Tutorial](https://elixirschool.com/en/lessons/basics/testing/).
 
 As a general rule all public methods in every module should have proper edge case testing. With Phoenix projects views and templates may be tested through controller tests.
 
